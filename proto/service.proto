@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package service;
+
+service Stream {
+    rpc Data(stream Info) returns (stream Info) {};
+}
+
+message Info {
+    string id = 1;
+    string data = 2;
+}
